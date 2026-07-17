@@ -1,38 +1,15 @@
-import java.sql.*;
 import static java.lang.Class.forName;
 
 public class Main {
     public static void main(String[] args) {
-        Connection connection =null;
-        Statement statement= null;
-
-        try {
-            connection = JdbcConnection.getJdbcConnection();
-            statement = connection.createStatement();
-
-            String sql = "INSERT INTO STUDENT(ID,NAME,AGE,CITY) VALUES(1,'Disha',17,'Nagpur')";
-            int rows = statement.executeUpdate(sql);
-
-            if (rows == 0) {
-                System.out.println("Failed to enter Data");
-            } else {
-                System.out.println("Successfully Entered Data");
-            }
-        }
-        catch(SQLException e){
-            e.printStackTrace();
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-        finally
-        {
-            try {
-                JdbcConnection.closeConnection(connection,statement);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-
+//        statement.DataInsertion d=new statement.DataInsertion();
+//        statement.DataDeletion e=new statement.DataDeletion();
+//        statement.DataRetrieve f=new statement.DataRetrieve();
+//        statement.CRUD_Opertion g=new statement.CRUD_Opertion();
+//        preparedstatement.Insertion_PreparedState h= new preparedstatement.Insertion_PreparedState();
+//        preparedstatement.Deletion_PreparedState i= new preparedstatement.Deletion_PreparedState();
+//        preparedstatement.Update_PreparedState j= new preparedstatement.Update_PreparedState();
+//        preparedstatement.Retrieve_PreparedState k= new preparedstatement.Retrieve_PreparedState();
+//        preparedstatement.BatchUpdate l= new preparedstatement.BatchUpdate();
     }
 }
